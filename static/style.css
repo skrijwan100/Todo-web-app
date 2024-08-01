@@ -41,9 +41,6 @@ body {
     background-color: #575757;
 }
 
-.dropdown .dropbtn {
-    cursor: pointer;
-}
 
 .dropdown-content {
     display: none;
