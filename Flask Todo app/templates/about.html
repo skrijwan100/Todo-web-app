@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}About{% endblock title %}
+{% block body %}
+<div class="main">
+    <div class="container">
+        <header>
+            <h1>About My To-Do App</h1>
+        </header>
+        <section>
+            <p>
+                Welcome to My To-Do App, a simple yet effective tool designed to help you manage your daily tasks and stay organized. 
+                Whether you're planning your day, organizing a project, or simply keeping track of your personal goals, 
+                My To-Do App offers an intuitive interface to ensure that nothing falls through the cracks.
+            </p>
+            <p>
+                This application was built using <strong>Flask</strong>, a lightweight and versatile web framework for Python. 
+                The back-end is powered by <strong>SQLite</strong>, a fast and reliable database, ensuring that your tasks are securely stored and easily accessible.
+            </p>
+            <p>
+                Features of My To-Do App include:
+            </p>
+            <ul>
+                <li>Add new tasks with ease</li>
+                <li>Update existing tasks to keep your list up to date</li>
+                <li>Delete tasks that are no longer needed</li>
+                <li>View all your tasks at a glance</li>
+            </ul>
+            <p>
+                We hope My To-Do App helps you stay productive and organized. If you have any feedback or suggestions for improvement, 
+                feel free to reach out. Thank you for choosing My To-Do App to manage your tasks!
+            </p>
+        </section>
+    </div>
+</div>
+<script src="static/script.js"></script>
+{% endblock body %}

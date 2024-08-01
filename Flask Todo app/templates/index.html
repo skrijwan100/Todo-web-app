@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+<div class="main">
+    <div class="container">
+        <h1>To-Do List</h1>
+        <form id="todoForm" action="/" method="POST">
+            <input type="text" id="task" name="title" placeholder="Todo Title" required>
+            <input type="text" id="taskdic" name="disc" placeholder="Todo Discribtion" required>
+            <!-- <input type="date" id="dueDate" required> -->
+            <button type="submit">Add Task</button>
+        </form>
+        <h2>Your Todo</h2>
+        <table id="todoTable">
+
+            <tbody>
+                {% if alltodo|length==0 %}
+                <div class="show">NO TODO ADDED. ADD YOUR TODO NOW</div>
+                {% else %}
+                <thead>
+                    <tr>
+                        <th>SNo</th>
+                        <th>Task title</th>
+                        <th>task Description</th>
+                        <th>Time</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                {% for todo in alltodo %}
+                <tr>
+                    <td>{{loop.index}}</td>
+                    <td>{{todo.title}}</td>
+                    <td>{{todo.disc}}</td>
+                    <td>{{todo.my_date}}</td>
+                    <td class="justify"><a href="delete/{{todo.sno}}"><button class="delete-button">Delete</button></a>
+                        <a href="updates/{{todo.sno}}"><button class="delete-button">update</button></a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        {% endif %}
+
+
+    </div>
+</div>
+<script src="static/script.js"></script>
+{% endblock body %}
